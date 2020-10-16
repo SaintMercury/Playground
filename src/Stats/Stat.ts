@@ -1,7 +1,12 @@
-import Modifier from "./Modifier";
+export type StatName = string;
 
 export default class Stat {
-    public name: string;
-    private isDirty: boolean;
-    private modifiers: Modifier[];
+    public displayName: string;
+    public statName: StatName;
+    public value: number;
+
+    public constructor(statName: string, initialValue?: number) {
+        this.statName = statName;
+        this.value = initialValue || 0;
+    }
 }

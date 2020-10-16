@@ -1,7 +1,12 @@
+import AbilitiesTest from "./Stats/Abilities.test";
 
 function test() {
-    // new Stats
-    //  add new Modifier(poison_dmg, increase_percent, 12)
+    const abilityTests = AbilitiesTest();
+    for (let i = 0; i < abilityTests.length; ++i) {
+        console.log(`Ability Test ${i}`);
+        abilityTests[i]();
+        console.log('------------------');
+    }
 }
 
 test();
